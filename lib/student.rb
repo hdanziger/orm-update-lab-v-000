@@ -8,15 +8,21 @@ class Student
   end
 
   def self.create_table
-  end 
+  end
 
   def self.drop_table
   end
 
-  def save 
-  end 
+  def save
+  end
 
   def self.create
+  end
+
+  def self.new_from_db
+  end
+
+  def self.find_by_name
   end
 
   # Remember, you can access your database connection anywhere in this class
