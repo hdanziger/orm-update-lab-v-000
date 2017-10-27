@@ -58,10 +58,8 @@ class Student
     FROM students
     WHERE name = ?
     SQL
-
-    DB[:conn].execute(sql, name).map do |row|
-      self.new_from_db(row)
-    end.first
+    result = DB[:conn].execute(sql, name)[0]
+    student = Student.new(result[0], result[1], result[2])
   end
 
   def update
